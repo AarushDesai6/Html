@@ -2,128 +2,127 @@
 <html>
 
 <head>
-    <title>My Weather App Homepage</title>
+    <title>My Restaurant Menu Card</title>
 
     <style>
-        /* Universal selector: applies basic settings to the full page */
         * {
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
 
-        /* Body background uses colour, image pattern, repeat, position, and attachment */
         body {
-            background-color: #87ceeb;
-            background-image: radial-gradient(circle, white 2px, transparent 3px);
-            background-size: 40px 40px;
-            background-repeat: repeat;
-            background-position: top center;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
+            font-family: Georgia, serif;
+            background-color: #fff8e7;
+            color: #3b2f2f;
         }
 
-        h1 {
-            font-size: 36px;
-            color: white;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #f0f8ff;
-        }
-
-        .weather-card {
-            width: 400px;
-            border: 3px solid white;
-            border-radius: 20px;
-            background-image: linear-gradient(to bottom right, #1e90ff, #87cefa);
-        }
-
-        .weather-icon {
-            font-size: 70px;
-            animation: floatCloud 3s infinite alternate;
-        }
-
-        #temperature {
-            font-size: 48px;
-            font-weight: bold;
-            color: #fffacd;
-        }
-
-        .details {
-            font-size: 18px;
-            color: white;
-        }
-
-        .forecast-section {
+        .menu-card {
             width: 600px;
-            border: 3px solid white;
+            border: 3px solid #8b4513;
             border-radius: 15px;
-            background-image: radial-gradient(circle, white, #add8e6);
-            color: #003366;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px #8b4513;
         }
 
-        .forecast-title {
-            color: #003366;
+        .restaurant-name {
+            font-size: 42px;
+            font-weight: bold;
+            color: #8b0000;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px #d2b48c;
         }
 
-        .day {
-            border: 2px solid #4682b4;
-            font-size: 17px;
-            color: #003366;
+        .tagline {
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+            color: #6b4226;
+            text-decoration: underline;
         }
 
-        /* Group selector: styles both headings together */
-        h2,
-        h3 {
-            color: white;
+        .menu-section {
+            border: 2px solid #ffcd8b;
+            box-shadow: 0 0 8px #d2b48c;
         }
 
-        /* CSS animation using @keyframes */
-        @keyframes floatCloud {
-            from {
-                transform: translateY(0);
-            }
+        .section-title {
+            font-size: 26px;
+            color: #a0522d;
+            text-transform: capitalize;
+            text-decoration: overline;
+        }
 
-            to {
-                transform: translateY(20px);
-            }
+        .dish-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4b0082;
+            text-transform: capitalize;
+        }
+
+        .dish-name:hover {
+            transform: scale(1.1);
+        }
+
+        .dish-description {
+            font-size: 15px;
+            line-height: 1.6;
+            text-indent: 30px;
+            color: #555555;
+        }
+
+        .special-offer {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #b22222;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px #000000;
+            box-shadow: 0 0 12px #b22222;
+            transform: rotate(-2deg);
         }
     </style>
 </head>
 
 <body>
 
-    <h1>My Weather App Homepage</h1>
+    <div class="menu-card">
 
-    <p class="subtitle">
-        Check today's weather and plan your day better.
-    </p>
+        <h1 class="restaurant-name"> Aarush's Pizza Bites!</h1>
 
-    <div class="weather-card">
-        <h2>Today's Weather</h2>
+        <p class="tagline">Oven fired, flavor inspired!</p>
 
-        <div class="weather-icon">Cloud</div>
+        <div class="menu-section">
+            <h2 class="section-title">starters</h2>
 
-        <p id="temperature">28°C</p>
+            <p class="dish-name">cheesy garlic bread</p>
+            <p class="dish-description">
+                Crispy bread topped with melted cheese, garlic butter, and fresh herbs.
+            </p>
 
-        <p class="details">City: Bengaluru</p>
-        <p class="details">Condition: Partly Cloudy</p>
-        <p class="details">Humidity: 62%</p>
-        <p class="details">Wind Speed: 12 km/h</p>
-    </div>
+            <p class="dish-name">honey chilli potatoes</p>
+            <p class="dish-description">
+                Crispy potatoes tossed in a sweet and spicy honey chilli sauce.
+            </p>
+        </div>
 
-    <h2>Weekly Forecast</h2>
+        <div class="menu-section">
+            <h2 class="section-title">main course</h2>
 
-    <div class="forecast-section">
-        <h3 class="forecast-title">Next 5 Days</h3>
+            <p class="dish-name">Classic Burger</p>
+            <p class="dish-description">
+                A juicy beef patty with lettuce, tomato, cheese, and our special sauce, served in a toasted bun.
+            </p>
 
-        <p class="day">Monday: Sunny - 30°C</p>
-        <p class="day">Tuesday: Cloudy - 27°C</p>
-        <p class="day">Wednesday: Rainy - 24°C</p>
-        <p class="day">Thursday: Windy - 26°C</p>
-        <p class="day">Friday: Stormy - 23°C</p>
+            <p class="dish-name">veggie pizza</p>
+            <p class="dish-description">
+                A colourful pizza loaded with fresh vegetables, cheese, and tasty sauce.
+            </p>
+        </div>
+
+        <p class="special-offer">Weekend special: 15% to 29% off!</p>
+
     </div>
 
 </body>

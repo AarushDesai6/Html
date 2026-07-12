@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Food Menu</title>
+        <style>
+            body {
+                font-family: Arial;
+                background-color: #fff8f0;
+                padding: 30px;
+                text-align: center;
+            }
+            h1{color:greenyellow; }
+            /* Sibling Selector - styles the paragraph right after h1 */
+            h1 + p {
+                background: #ffa51d;
+                padding: 10 px 20 px;
+                border-radius: 8px;
+                color:forestgreen;
+                display: inline-block;
+            }
+            ul{ padding:0; margin-top: 20px;}
+            /*Child-selector - styles only the direct li children of ul */
+            ul > li {
+                list-style:none;
+                font-size: 18px;
+                font-weight: bold;
+                color: #ff4500;
+                padding: 10px, 20px;
+                margin: 6px auto;
+                width: 260px;
+                background: #7ff074;
+                border-radius: 8px;
+            }
+            /* nth-child - high lights the 3rd item as chef's special*/
+            ul li:nth-child(3) {
+                background: #ff4500;
+                color: #70cae6;
+            }
+                .desc {
+                    color:#555;
+                    margin-top: 20px;
+                    font-size: 15px;
+                    max-width: 400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                /* first-letter - akes the first letter big and bold */
+                .desc::first-letter {
+                    font-size: 220%;
+                    font-weight: bold;
+                    color: #ae42da;
+                }
+                .links { margin-top: 25px; }
+                /*hover effect - links glow when the mouse moves over them */
+                a {
+                    color: #a58e0d;
+                    text-decoration: none;
+                    font-size: 15px;
+                    margin: 0 12px;
+                    padding: 8px 18px;
+                    border: 2px solid #80d6ba;
+                    border-radius: 8px;
+                }
+                a:hover {
+                    color: white;
+                    background: #dd6e25
+                }
+        </style>
+    </head>
+    <body>
+        <h1>My Food Menu</h1>
+        <p>Welcome to my food menu! Pick your favorite dish and slice in!</p>
+        <ul>
+            <li>Spaghetti Carbonara</li>
+            <li>Margherita Pizza</li>
+            <li>Veg Double Crunchy Taco - Chef's Special!</li>
+            <li>Grilled Salmon</li>
+            <li>Chocolate Lava Cake</li>
+        </ul>
+        <p class="desc">This menu features a variety of delicious dishes, from classic Italian pasta to fresh seafood and decadent desserts. Each item is carefully prepared to ensure the best taste and quality. Try them all and rate our service in our app!</p>
+        <div class="links">
+            <a href="#">Order Now</a>
+            <a href="#">About Us</a>
+            <a href="#">See More</a>
+        </div>
+    </body>
+</html>
